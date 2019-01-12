@@ -32,13 +32,17 @@ object ImageAddLoge {
             saveFile.mkdirs()
         }
         val fileList = file.listFiles()
+        val len = fileList.size
         val pfpath = photoFolderPath + "\\"
         val sfpath = saveFolderPath + "\\"
+        var i = 0f
         fileList.forEach {
             //添加logo  原图片路径  logo路径 生成合成图片路径 x,y
             addImageLogo(pfpath + it.name, logoPath, sfpath + it.name, x, y)
+            ++i
+            println("图片处理中：" + ((i / len) * 100) + "%")
         }
-        println("成功添加" + fileList.size + "张图片水印logo")
+        println("成功处理 $len 张图片")
         Runtime.getRuntime().exec("cmd /c start explorer $saveFolderPath")
     }
 

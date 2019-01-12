@@ -8,8 +8,8 @@ import com.manjusaka.image.core.ImageAddLoge
  * @version V1.0.0
  */
 fun main(args: Array<String>) {
-    val yLj = "C:\\Users\\Lenovo\\Desktop\\temp\\snap\\"
+    val yLj = "C:\\Users\\Lenovo\\Desktop\\temp\\snap"
     val logoPath = "C:\\Users\\Lenovo\\Desktop\\logo.jpg"
-    val savePath = "C:\\Users\\Lenovo\\Desktop\\temp\\test\\"
+    val savePath = "C:\\Users\\Lenovo\\Desktop\\temp\\test"
     ImageAddLoge.findFileList(yLj, logoPath, savePath, 550, 550)
 }
